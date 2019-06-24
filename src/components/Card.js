@@ -5,7 +5,7 @@ import Carpicornn from "../../public/logos/carpicorn.svg";
 import Leo from "../../public/logos/leo.svg";
 import Libra from "../../public/logos/libra.svg";
 import Scorpio from "../../public/logos/scorpio.svg";
-import Virgo from "../../public/logos/Virgo.svg";
+import Virgo from "../../public/logos/virgo.svg";
 import Sagittarius from "../../public/logos/sagittarius.svg";
 
 const generateCards = () => {
