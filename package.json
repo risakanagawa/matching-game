@@ -23,7 +23,7 @@
     "react-dom": "^16.8.6",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "url-loader": "^2.0.0",
+    "url-loader": "^2.0.0"
 
   },
   "scripts": {
