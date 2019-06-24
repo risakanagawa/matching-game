@@ -1,0 +1,133 @@
+* {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('/img/star.jpeg');
+    height: 100vh;
+    width: 100vw;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.main-container {
+    h1 {
+        font-size: 3rem;
+        font-weight: 100;
+        color: #00ffbf;
+        text-align: center;
+        letter-spacing: 10px;
+    }
+}
+
+
+.card-container {
+    width: 600px;
+    padding: 20px;
+    height: auto;
+    background: #ffffff;
+    box-shadow: 0 0 5px #03ffab;
+    border-radius: 25px;
+    margin: 0 auto;
+
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    perspective: 1000px;
+}
+
+.card-background {
+    box-shadow: 0 0 10px #979797;
+    background: #d1d1d1;
+}
+
+.card {
+    text-align: center;
+    position: relative;
+    height: 130px;
+    transform: scale(1);
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 5px;
+    &:active {
+        transform: scale(0.95);
+        transition: transform .2s;
+    }
+
+    .front-card,
+    .back-card {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 5px;
+
+    }
+
+    .back-card {
+        background: #00a37a;
+
+    }
+
+    .front-card {
+        background: #363636;
+        transform: rotateY(180deg);
+    }
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .1s linear, opacity .1s linear;
+  }
+
+.symbol {
+    fill: #ffffff;
+    width: 60px;
+    height: 60px;
+    margin: 30px 0;
+}
+
+.finished {
+    height: 640px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1s ease-in;
+
+    h1 {
+        font-weight: 600;
+        border-bottom: 5px dotted #00ffbf;
+        letter-spacing: 1px;
+    }
+
+    button {
+        text-align: center;
+        width: 200px;
+        padding: 10px 20px;
+        border: none;
+        background: #ff4006;
+        border-radius: 10px;
+        color: #ffffff;
+        box-shadow: 0 0 10px #9c9c9c;
+        &:hover {
+            transform: translateY(-5px);
+            transition: transform .5s linear;
+        }
+        &:focus {
+            outline: none;
+          }
+    }
+}
